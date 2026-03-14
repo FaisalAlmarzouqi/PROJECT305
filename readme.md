@@ -1,20 +1,23 @@
-Software Engineering Project – ITSE305
-University of Bahrain – College of IT
+# Bazaria Online Shopping System
 
-Project Title
-Bazaria (Online Shopping system)
+## Feature: Search Products
 
-Team members:
-Yaseen mohamed- 202206948
-Abdulaziz Sedrati- 202306676
-Hussain Jassim- 202307311
-Faisal Hesham Almarzouqi- 202210666
+This feature allows users to search for products by name.
 
-Tasks Distribution
-1. Abdulaziz:User Registration / Login
+### Components
 
-2. Yaseen:Search Products
+- **Product.java (model)**  
+  Represents the product with attributes like name and price.
 
-3. Faisal:Add to Cart
+- **ProductRepository.java (data)**  
+  Stores the list of products and retrieves them.
 
-4. Hussain:Checkout & Payment
+- **SearchService.java (business)**  
+  Handles the business logic for searching products.
+
+- **SearchController.java (presentation)**  
+  Handles user input and displays search results.ٍ
+
+### Example
+
+User enters a product name and the system returns matching products.
