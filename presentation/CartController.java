@@ -30,3 +30,9 @@ public class CartController {
         }
     }
 }
+
+// #1 small edit for github
+// #2 small edit for github (aziz)
+// #3 small edit for github (faisal)
+// #4 small edit for github (yassine)
+// #5 small edit for github (hussein)
