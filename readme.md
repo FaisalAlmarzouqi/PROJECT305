@@ -13,7 +13,7 @@ Faisal Hesham Almarzouqi- 202210666
 Tasks Distribution
 1. Abdulaziz:User Registration / Login
 
-2. Yaseen:Search Products
+2. Yaseen:Search Products.
 
 3. Faisal:Add to Cart
 
