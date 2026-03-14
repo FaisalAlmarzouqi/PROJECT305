@@ -2,7 +2,7 @@ package business;
 
 /**
 
- Validates all user input before sending to Stripe API.
+ Validates all user input before sending to Stripe API
  */
 public class PaymentValidator {
 
@@ -11,7 +11,7 @@ public class PaymentValidator {
     private static final String[] SUPPORTED_CURRENCIES = {"usd", "eur", "gbp", "aed", "bhd", "sar"};
 
     /**
-     * Validates payment amount is within allowed range.
+     * Validates payment amount is within allowed range
      *  amountInCents Amount in smallest currency unit
      * return true if valid
      */
@@ -20,7 +20,7 @@ public class PaymentValidator {
     }
 
     /**
-     * Validates currency is supported.
+     * Validates currency is supported
      * @param currency ISO currency code
      * @return true if supported
      */
