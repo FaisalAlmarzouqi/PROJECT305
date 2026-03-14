@@ -11,19 +11,17 @@ public class PaymentValidator {
     private static final String[] SUPPORTED_CURRENCIES = {"usd", "eur", "gbp", "aed", "bhd", "sar"};
 
     /**
-     * Validates payment amount is within allowed range
-     *  amountInCents Amount in smallest currency unit
-     * return true if valid
+     Validates payment amount is within allowed range
      */
+ 
     public boolean isValidAmount(long amountInCents) {
         return amountInCents >= MIN_AMOUNT_CENTS && amountInCents <= MAX_AMOUNT_CENTS;
     }
 
     /**
-     * Validates currency is supported
-     * @param currency ISO currency code
-     * @return true if supported
+      Validates currency is supported
      */
+ 
     public boolean isValidCurrency(String currency) {
         if (currency == null || currency.isBlank()) return false;
         for (String s : SUPPORTED_CURRENCIES)
@@ -32,37 +30,32 @@ public class PaymentValidator {
     }
 
     /**
-     * Validates email format.
-     * @param email Email string to validate
-     * @return true if valid format
+      Validates email format
      */
+ 
     public boolean isValidEmail(String email) {
         if (email == null || email.isBlank()) return false;
         return email.matches("^[\\w.+\\-]+@[\\w\\-]+\\.[a-zA-Z]{2,}$");
     }
 
     /**
-     * Validates customer name is not empty.
-     * @param name Customer name
-     * @return true if valid
+      Validates customer name is not empty
      */
     public boolean isValidName(String name) {
         return name != null && !name.isBlank() && name.trim().length() >= 2;
     }
 
     /**
-     * Validates Stripe Payment Intent ID format.
-     * @param id The ID to validate
-     * @return true if starts with pi_
+      Validates Stripe Payment Intent ID format
      */
     public boolean isValidPaymentIntentId(String id) {
         return id != null && id.startsWith("pi_") && id.length() > 5;
     }
 
     /**
-     * Returns supported currencies as a string.
-     * @return Comma-separated currency codes
+      Returns supported currencies as a string
      */
+ 
     public String getSupportedCurrencies() {
         StringBuilder sb = new StringBuilder();
         for (int i = 0; i < SUPPORTED_CURRENCIES.length; i++) {
