@@ -32,14 +32,7 @@ public class StripePaymentService {
         this.repository = repository;
     }
 
-    /**
-     * Creates a Stripe Payment Intent.
-     * @param amountInCents Amount in smallest currency unit
-     * @param currency ISO currency code
-     * @param customerName Customer full name
-     * @param customerEmail Customer email
-     * @return Payment object or null if failed
-     */
+   
     public Payment createPaymentIntent(long amountInCents, String currency,
                                        String customerName, String customerEmail) {
         System.out.println("\n[Stripe] Creating Payment Intent...");
