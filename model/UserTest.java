@@ -6,7 +6,7 @@ import static org.junit.jupiter.api.Assertions.*;
 
 public class UserTest {
 
-    // --- Default Constructor ----
+    // --- Default Constructor -----
 
     @Test
     void defaultConstructor_setsDefaultUsername() {
