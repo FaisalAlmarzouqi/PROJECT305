@@ -1,5 +1,6 @@
 package data;
 
+import model.Payment;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
@@ -20,8 +21,6 @@ public class PaymentRepositoryTest {
 
     @BeforeEach
     void setUp() {
-        // NOTE: Because paymentStore is static in PaymentRepository,
-        // we use unique IDs per test to avoid interference between tests.
         repository = new PaymentRepository();
         samplePayment = new Payment("pi_repoTest001", 2000L, "usd",
                 "requires_payment_method", "Test User", "test@example.com");

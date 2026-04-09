@@ -131,8 +131,8 @@ public class StripePaymentService {
      * @param params POST body parameters
      * @return Response body string or null
      */
-    private String sendStripeRequest(String method, String endpoint,
-                                     Map<String, String> params) throws Exception {
+    protected String sendStripeRequest(String method, String endpoint,
+                                       Map<String, String> params) throws Exception {
         URL url = new URL(STRIPE_API_URL + endpoint);
         HttpURLConnection conn = (HttpURLConnection) url.openConnection();
         conn.setRequestMethod(method);
