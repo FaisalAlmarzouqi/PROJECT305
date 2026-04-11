@@ -13,7 +13,7 @@ import model.Payment;
 public class PaymentRepository {
 
     /** In-memory store: Payment Intent ID → Payment object */
-    private static final Map<String, Payment> paymentStore = new HashMap<>();
+    private final Map<String, Payment> paymentStore = new HashMap<>();
 
     /**
      * Saves a payment record to the store.
