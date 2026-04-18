@@ -33,13 +33,15 @@ move all .java classes to src, and leave bin empty as it will house .class file 
 
 3. compile .java files to .class:
 run: javac -d bin $(find src -name "*.java" ! -name "*Test.java") 
-<!-- compiles every java file except test files -->
+
+compiles every java file except test files
 
 
 4. run randoop:
-<!-- example of generating tests for business.CartService class -->
+example of generating tests for business.CartService class
+
 run: java -classpath "PATH-TO-RANDOOP;bin" randoop.main.Main gentests --testclass=business.CartService
-<!-- 
+
     replace PATH-TO-RANDOOP with the path to "randoop-all-4.3.0.jar" file on your computer 
     example path: "C:\Users\User1\Downloads\randoop-all-4.3.4.jar"
--->
+
