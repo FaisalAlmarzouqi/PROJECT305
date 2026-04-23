@@ -2,6 +2,8 @@ package presentation;
 
 import org.junit.jupiter.api.Test;
 
+import presentation.CartController;
+
 import static org.junit.jupiter.api.Assertions.assertDoesNotThrow;
 
 public class CartControllerTest {
