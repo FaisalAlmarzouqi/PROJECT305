@@ -45,3 +45,6 @@ run: java -classpath "PATH-TO-RANDOOP;bin" randoop.main.Main gentests --testclas
     replace PATH-TO-RANDOOP with the path to "randoop-all-4.3.0.jar" file on your computer 
     example path: "C:\Users\User1\Downloads\randoop-all-4.3.4.jar"
 
+
+
+small edit for github actions
