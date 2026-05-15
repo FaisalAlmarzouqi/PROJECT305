@@ -17,7 +17,13 @@ public class SearchController {
         SearchService service = new SearchService();
 
         System.out.println("Enter product name to search:");
-        String keyword = scanner.nextLine();
+        String keyword = scanner.nextLine().trim();
+
+        if (keyword.isEmpty()) {
+            System.out.println("Search keyword cannot be empty.");
+            scanner.close();
+            return;
+        }
 
         List<Product> results = service.searchProducts(keyword);
 
@@ -30,7 +36,8 @@ public class SearchController {
             for (Product product : results) {
                 System.out.println(product.getName() + " - $" + product.getPrice());
             }
-
         }
+
+        scanner.close();
     }
 }

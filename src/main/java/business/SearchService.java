@@ -17,6 +17,11 @@ public class SearchService {
 
         List<Product> results = new ArrayList<>();
 
+        // Prevent empty or null search input
+        if (keyword == null || keyword.trim().isEmpty()) {
+            return results;
+        }
+
         for (Product product : repository.getAllProducts()) {
 
             if (product.getName().toLowerCase().contains(keyword.toLowerCase())) {

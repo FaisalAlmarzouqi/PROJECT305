@@ -13,6 +13,7 @@ public class ProductRepository {
 
     public ProductRepository() {
 
+        // Sample products for testing search functionality
         products.add(new Product(1, "iPhone 15", 999));
         products.add(new Product(2, "Samsung Galaxy", 850));
         products.add(new Product(3, "Lenovo Laptop", 1200));
@@ -20,6 +21,8 @@ public class ProductRepository {
     }
 
     public List<Product> getAllProducts() {
+
+        // Return all available products
         return products;
     }
 }
