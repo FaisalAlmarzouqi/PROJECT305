@@ -22,9 +22,12 @@ public class SearchService {
             return results;
         }
 
+        // Convert keyword once before loop
+        String lowerCaseKeyword = keyword.toLowerCase(); // done 
+
         for (Product product : repository.getAllProducts()) {
 
-            if (product.getName().toLowerCase().contains(keyword.toLowerCase())) {
+            if (product.getName().toLowerCase().contains(lowerCaseKeyword)) {
                 results.add(product);
             }
 

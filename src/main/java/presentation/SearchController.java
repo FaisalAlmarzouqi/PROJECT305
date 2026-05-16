@@ -17,24 +17,23 @@ public class SearchController {
         SearchService service = new SearchService();
 
         System.out.println("Enter product name to search:");
-        String keyword = scanner.nextLine().trim();
 
-        if (keyword.isEmpty()) {
-            System.out.println("Search keyword cannot be empty.");
-            scanner.close();
-            return;
-        }
+        String keyword = scanner.nextLine();
 
         List<Product> results = service.searchProducts(keyword);
 
         if (results.isEmpty()) {
+
             System.out.println("No products found.");
+
         } else {
 
             System.out.println("Search Results:");
 
             for (Product product : results) {
+
                 System.out.println(product.getName() + " - $" + product.getPrice());
+
             }
         }
 

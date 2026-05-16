@@ -1,0 +1,24 @@
+package model;
+
+import org.junit.jupiter.api.Test;
+import static org.junit.jupiter.api.Assertions.*;
+
+public class ProductTest {
+
+    @Test
+    void testProductConstructorAndGetters() {
+        Product product = new Product(1, "iPhone 15", 999.0);
+
+        assertEquals(1, product.getId());
+        assertEquals("iPhone 15", product.getName());
+        assertEquals(999.0, product.getPrice());
+    }
+
+    @Test
+    void testDifferentProductValues() {
+        Product product = new Product(2, "Samsung Galaxy", 850.0);
+
+        assertEquals(2, product.getId());
+        assertEquals("Samsung Galaxy", product.getName());
+        assertEquals(850.0, product.getPrice());
+    }
