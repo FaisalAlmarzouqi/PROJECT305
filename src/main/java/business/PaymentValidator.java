@@ -21,21 +21,19 @@ public class PaymentValidator {
     /**
       Validates currency is supported
      */
- 
-    public boolean isValidCurrency(String currency) {
-        if (currency == null || currency.isBlank()) return false;
-        for (String s : SUPPORTED_CURRENCIES)
-            if (s.equalsIgnoreCase(currency)) return true;
-        return false;
-    }
 
+    public boolean isValidCurrency(String currency)
+    { if (currency == null || currency.isBlank()) return false; for (String s : SUPPORTED_CURRENCIES)
+        if (s.equalsIgnoreCase(currency)) return true; return false;
+    }
     /**
       Validates email format
      */
- 
+
     public boolean isValidEmail(String email) {
-        if (email == null || email.isBlank()) return false;
-        return email.matches("^[\\w.+\\-]+@[\\w\\-]+\\.[a-zA-Z]{2,}$");
+        return email != null
+                && !email.isBlank()
+                && email.matches("^[\\w.+-]+@[\\w-]+\\.[A-Za-z]{2,}$");
     }
 
     /**
