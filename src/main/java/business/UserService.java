@@ -45,9 +45,9 @@ public class UserService {
         return true;
     }
 
-    // Validate password (at least 8 characters, atleast 1 special char)
+    // Validate password (at least 8 characters)
     private boolean isValidPassword(String password) {
-        if (password == null || password.length() < 8 || !password.matches(".*[!@#$%^&].*")) {
+        if (password == null || password.length() < 8) {
             System.out.println("Password is short.");
             return false;
         }
