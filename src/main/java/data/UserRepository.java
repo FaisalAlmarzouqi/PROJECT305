@@ -38,12 +38,32 @@ public class UserRepository {
 
     // Update user
     public boolean update(User user) {
+        // Check if user is null
+        if (user == null) {
+            System.out.println("ipdate failed: User cannot be null.");
+            return false;
+        }
+
+        // Check if username is null or empty
+        if (user.getUsername() == null || user.getUsername().trim().isEmpty()) {
+            System.out.println("update failed: username cannot be null or empty.");
+            return false;
+        }
+
+        // Check if password is null or empty
+        if (user.getPassword() == null || user.getPassword().trim().isEmpty()) {
+            System.out.println("update failed: password cannot be null or empty.");
+            return false;
+        }
+
         for (int i = 0; i < users.size(); i++) {
             if (users.get(i).getUsername().equals(user.getUsername())) {
                 users.set(i, user);
                 return true;
             }
         }
+
+        System.out.println("update failed: user '" + user.getUsername() + "' not found.");
         return false;
     }
 
@@ -59,15 +79,11 @@ public class UserRepository {
 
     // Delete user by username
     public void delete(String username) {
-        // User deletedUser = null;
         for (User user : users) {
             if (user.getUsername().equals(username)) {
-                // deletedUser = user;
                 users.remove(user);
                 break;
             }
         }
-
-        // return deletedUser;
     }
 }
