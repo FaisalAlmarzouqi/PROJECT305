@@ -49,10 +49,11 @@ public class PaymentRepository {
      */
     public boolean updateStatus(String paymentIntentId, String newStatus) {
         Payment payment = paymentStore.get(paymentIntentId);
-        if (payment != null) {
-            payment.setStatus(newStatus);
-            return true;
-        }
-        return false;
+
+        if (payment == null) return false;
+
+        payment.setStatus(newStatus);
+        return true;
     }
-}
+    }
+
