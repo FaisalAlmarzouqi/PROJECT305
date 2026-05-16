@@ -32,10 +32,10 @@ public class UserService {
         return newUser;
     }
 
-    // Validate username (3-20 characters, alphanumeric and underscores only)
+    // Validate username (4-8 characters, alphanumeric and underscores only)
     private boolean isValidUsername(String username) {
-        if (username == null || username.length() < 3 || username.length() > 20) {
-            System.out.println("Error: Username must be between 3 and 20 characters!");
+        if (username == null || username.length() < 4 || username.length() > 8) {
+            System.out.println("Error: Username must be between 4 and 8 characters!");
             return false;
         }
         if (!username.matches("^[a-zA-Z0-9_]+$")) {
@@ -45,9 +45,9 @@ public class UserService {
         return true;
     }
 
-    // Validate password (at least 6 characters)
+    // Validate password (at least 8 characters, atleast 1 special char)
     private boolean isValidPassword(String password) {
-        if (password == null || password.length() < 6) {
+        if (password == null || password.length() < 8 || !password.matches(".*[!@#$%^&].*")) {
             System.out.println("Password is short.");
             return false;
         }
